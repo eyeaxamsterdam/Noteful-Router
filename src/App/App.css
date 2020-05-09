@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  font-size: 45px;
+}
+
+.header:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.mainContent {
+  display: flex;
+}

@@ -1,0 +1,12 @@
+.noteCard {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 10px 5px;
+}
+
+.noteCard h2:hover {
+  color: blue;
+  cursor: pointer;
+}
