@@ -1,3 +1,8 @@
 .folders {
   flex-basis: 33%;
 }
+
+.listNav:hover {
+  color: green;
+  cursor: pointer;
+}

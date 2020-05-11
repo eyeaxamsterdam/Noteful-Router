@@ -4,13 +4,16 @@ import dummyStore from "../dummy-store";
 import Note from "../Note/Note";
 import "./NoteListMain.css";
 
-export default function NoteListMain() {
-  const noteListBank = dummyStore.notes;
-
+export default function NoteListMain(props) {
+  const notes = props.match.params.folderId
+    ? dummyStore.notes.filter(
+        (note) => note.folderId === props.match.params.folderId
+      )
+    : dummyStore.notes;
   return (
     <div className="NoteListMain List">
-      {noteListBank.map((i) => {
-        return <Note name={i.name} date={i.modified} />;
+      {notes.map((note, i) => {
+        return <Note {...note} key={i} />;
       })}
     </div>
   );
