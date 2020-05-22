@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NoteListNav from "../NoteListNav/NoteListNav";
 import NotePageNav from "../NotePageNav/NotePageNav";
 import NoteListMain from "../NoteListMain/NoteListMain";
@@ -125,7 +124,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     const value = {
       notes: this.state.notes,
       folders: this.state.folders,
@@ -145,7 +143,6 @@ class App extends Component {
             <header className="App__header">
               <h1>
                 <Link to="/">Noteful</Link>{" "}
-                <FontAwesomeIcon icon="check-double" />
               </h1>
             </header>
             <main className="App__main">{this.renderMainRoutes()}</main>

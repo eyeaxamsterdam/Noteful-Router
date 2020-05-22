@@ -29,6 +29,7 @@ export default class AddNote extends React.Component {
   };
 
   handleFormSubmit = (e) => {
+    console.log(e.target.folders.value);
     e.preventDefault(e);
     const newNote = {
       name: e.target.name.value,
@@ -54,7 +55,6 @@ export default class AddNote extends React.Component {
   };
 
   render() {
-    console.log(this.context);
     return (
       <>
         <header>
@@ -72,8 +72,6 @@ export default class AddNote extends React.Component {
             type="text"
             name="name"
             id="name"
-            aria-required="true"
-            aria-label="Name"
             onChange={(e) =>
               this.context.updateNewNoteData(e.target.name, e.target.value)
             }
@@ -88,19 +86,12 @@ export default class AddNote extends React.Component {
             type="text"
             name="content"
             id="content"
-            aria-required="true"
-            aria-label="Description"
             onChange={(e) =>
               this.context.updateNewNoteData(e.target.name, e.target.value)
             }
           />
           <label htmlFor="folders">Select a Folder</label>
-          <select
-            name="folders"
-            id="folders"
-            aria-required="true"
-            aria-label="Select a folder"
-          >
+          <select name="folders" id="folders">
             {this.parseFolders()}
           </select>
           <button type="submit">Submit</button>

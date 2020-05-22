@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ApiContext from "../ApiContext";
-import config from "../config";
 import "./Note.css";
 
 export default class Note extends React.Component {
@@ -35,7 +34,7 @@ export default class Note extends React.Component {
         </button>
         <div className="Note__dates">
           <div className="Note__dates-modified">
-            Modified <span className="Date"></span>
+            Modified: {modified} <span className="Date" />
           </div>
         </div>
       </div>
