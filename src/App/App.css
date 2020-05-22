@@ -37,3 +37,19 @@
   height: calc(100vh - 120px);
   overflow: auto;
 }
+
+.addFolderNav {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.AddFolder form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.329);
+  padding: 30px;
+  margin: 30px 30px;
+}
